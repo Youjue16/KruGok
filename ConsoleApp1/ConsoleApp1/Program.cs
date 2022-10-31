@@ -1,4 +1,10 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Threading;
+
 
 namespace ConsoleApp1
 {
@@ -71,18 +77,57 @@ namespace ConsoleApp1
                 System.Console.WriteLine("false | false=" + (false | false).ToString());
                 //
             }
-            else if (!false) 
+            else if (false) 
             {
                 for (int i = 0; i < 10; i++) System.Console.WriteLine(i);
                 System.Console.WriteLine("##############################");
                 for (int i = 9; i >=0; i--) System.Console.WriteLine(i);
             }
+            else if (false)
+            {
+                int i = 0;
+                while (i < 10)
+                {
+                    System.Console.WriteLine(i);
+                    i++;
+                }   
+                System.Console.WriteLine("##############################");
+                i = 9;
+                while (i >= 0)
+                {
+                    System.Console.WriteLine(i);
+                    i--;
+                }
+            }
+            else if (false)
+            {
+                int i = 0;
+                do{
+                    System.Console.WriteLine(i);
+                    i++;
+                }
+                while (i < 10);
+                System.Console.WriteLine("##############################");
+                i = 9;
+                do{
+                    System.Console.WriteLine(i);
+                    i--;
+                }
+                while (i >= 0) ;
+            }
             else if (!false)
             {
-                for (int i = 0; i < 10; i++) System.Console.WriteLine(i);
+                var _List = new List<int>() { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+                foreach (int i in _List )System.Console.WriteLine(i);
                 System.Console.WriteLine("##############################");
-                for (int i = 9; i >= 0; i--) System.Console.WriteLine(i);
+                _List.ForEach(i => System.Console.WriteLine(i));
+                System.Console.WriteLine("##############################");
+                _List.Select(i => { System.Console.WriteLine(i); return i; }).ToList();
+                System.Console.WriteLine("##############################");
+                System.Console.WriteLine("##############################");
+                System.Threading.Tasks.Parallel.For(0,10,i=> System.Console.WriteLine(i));
             }
+            System.Console.ReadLine();
         }
     }
 }
