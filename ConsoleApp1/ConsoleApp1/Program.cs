@@ -53,23 +53,35 @@ namespace ConsoleApp1
             else if (false)
             {
                 var _qwe = new ConsoleApp1.Dyb.Syndyk.Zaich.Ytka.Egg.Needle();
-                System.Console.WriteLine("_qwe.ToString()=" +_qwe.ToString());
+                System.Console.WriteLine("_qwe.ToString()=" + _qwe.ToString());
                 System.Console.WriteLine("_qwe.GetType().Name=" + _qwe.GetType().Name);
                 System.Console.WriteLine("_qwe.GetType().FullName=" + _qwe.GetType().FullName);
             }
-            else if (!false)
+            else if (false)
             {
                 System.Boolean _flag = true;
                 System.Console.WriteLine(_flag.ToString());
                 ////////////////////////////////////////////////////////////////////////////
-                System.Console.WriteLine("true&true=" + (true&true).ToString());
-                System.Console.WriteLine("true&false=" + (true&false).ToString());
-                System.Console.WriteLine("false&false=" + (false&false).ToString());
+                System.Console.WriteLine("true&true=" + (true & true).ToString());
+                System.Console.WriteLine("true&false=" + (true & false).ToString());
+                System.Console.WriteLine("false&false=" + (false & false).ToString());
                 ////////////////////////////////////////////////////////////////////////////
                 System.Console.WriteLine("true | true=" + (true | true).ToString());
                 System.Console.WriteLine("true | false=" + (true | false).ToString());
                 System.Console.WriteLine("false | false=" + (false | false).ToString());
                 //
+            }
+            else if (!false) 
+            {
+                for (int i = 0; i < 10; i++) System.Console.WriteLine(i);
+                System.Console.WriteLine("##############################");
+                for (int i = 9; i >=0; i--) System.Console.WriteLine(i);
+            }
+            else if (!false)
+            {
+                for (int i = 0; i < 10; i++) System.Console.WriteLine(i);
+                System.Console.WriteLine("##############################");
+                for (int i = 9; i >= 0; i--) System.Console.WriteLine(i);
             }
         }
     }
